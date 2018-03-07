@@ -1,0 +1,18 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+
+    <h2>Post Details</h2>
+    {% if post %}
+        <div class="postlist">
+            <div class="post">
+                <h3>{{ post.title }}</h3>
+                <em>{{ post.pub_date }}</em>
+                <p>{{ post.body }}</p>
+            </div>
+        </div>
+    {% else %}
+        <p>No post found!</p>
+    {% endif %}
+
+{% endblock %}
